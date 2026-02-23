@@ -3,7 +3,10 @@
     "allow": [
       "Bash(cd:*)",
       "Bash(head:*)",
-      "Bash(cd \"E:/coding/shebao-0222\" && npm run build 2>&1)"
+      "Bash(cd \"E:/coding/shebao-0222\" && npm run build 2>&1)",
+      "Bash(gh auth:*)",
+      "Bash(curl:*)",
+      "Bash(vercel:*)"
     ]
   }
 }

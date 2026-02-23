@@ -1,4 +1,4 @@
-import { supabase } from "./supabase";
+import { getSupabaseClient } from "./supabase";
 import { Salary, City, Result } from "@/types";
 
 /**
@@ -25,6 +25,7 @@ export async function calculateAndStoreResults(
   cityName: string
 ): Promise<{ success: boolean; error?: string; count?: number }> {
   try {
+    const supabase = getSupabaseClient();
     // 1. 获取城市标准
     const { data: cityData, error: cityError } = await supabase
       .from("cities")
